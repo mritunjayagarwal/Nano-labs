@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+section {
+    position: relative;
+    padding: 100px 0;
+    margin-top: -50px;
+    z-index: 0;
+}
+
+.hero-img {
+    position: absolute;
+    right: 0;
+    width: 30%;
+    bottom: 0;
+}
+
+p,
+h6 {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.14px;
+}
+
+.large-text {
+    font-size: 85px;
+    font-weight: 400;
+}
+
+#tags-cloud {
+    background: white;
+    padding: 10px;
+    margin-top: 10px;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.tag {
+    color: #FFFFFF;
+    text-align: center;
+    text-transform: capitalize;
+    border-radius: 100%;
+    display: inline-block;
+    position: absolute;
+    width: 0px;
+}
+
+.mask {
+    -webkit-mask:
+        radial-gradient(circle 0px at top left, #0000 0%, #000) top left,
+        radial-gradient(circle 0px at top right, #0000 0%, #000) top right,
+        radial-gradient(circle 20px at bottom left, #0000 98%, #000) bottom left,
+        radial-gradient(circle 0px at bottom right, #0000 0%, #000) bottom right;
+    -webkit-mask-size: 51% 51%;
+    -webkit-mask-repeat: no-repeat;
+}
+
+/* Strategy Section */
+
+.strategy-card {
+    padding: 1em;
+    border-radius: 15px;
+    background: #FFF;
+    box-shadow: 4px 4px 15px 9px rgba(0, 0, 0, 0.05);
+}
+
+.strategy-head {
+    color: #000;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.28px;
+}
+
+.strategy-para {
+    color: #000;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.14px;
+    margin-top: 20px;
+}
+
+/* Carousel Section */
+
+.carousel-section{
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    height: 210px;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #bbb;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    transform: rotateY(180deg);
+  }
+
+  .flip-card-back .strategy-card{
+    height: 100%;
+  }
