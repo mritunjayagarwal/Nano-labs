@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href=" https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.css">
 </head>
 
 <body>
@@ -34,7 +35,7 @@
                             <div class = "w-100">
                                 <div>
                                     <p style="margin-bottom: 0">This makes</p>
-                                    <h1 class="large-text">marketing</h1>
+                                    <h1 class="large-text animation-0">marketing</h1>
                                     <h1 class="large-text">agency</h1>
                                 </div>
                                 <div class="d-flex justify-content-end">
@@ -64,7 +65,7 @@
                     <div class="col-lg-6">
                         <div>
                             <p>This makes</p>
-                            <h1 class="large-text">marketting</h1>
+                            <h1 class="large-text animation-0">marketting</h1>
                             <h1 class="text-right large-text">marketting</h1>
                         </div>
                     </div>
@@ -338,50 +339,23 @@
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
+    <script src = "https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.js"></script>
+    <!-- <script src = " https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> -->
     <script src="assets/js/main.js"></script>
     <script>
-        function touching(margin) {
-            var result = false;
-            $('.tag').each(function () {
-                var t1 = $(this),
-                    t1radius = t1.width() / 2,
-                    t1x = t1.offset().left + t1radius,
-                    t1y = t1.offset().top + t1radius;
-
-                $('.tag').not(t1).each(function () {
-                    var t2 = $(this);
-                    t2radius = t2.width() / 2,
-                        t2x = t2.offset().left + t2radius,
-                        t2y = t2.offset().top + t2radius,
-                        dist = Math.sqrt((t2x - t1x) * (t2x - t1x) + (t2y - t1y) * (t2y - t1y));
-
-                    if (t1radius && t2radius && dist < t1radius + t2radius + margin) {
-                        result = true;
-                    }
-                })
-            });
-            return result;
-        } //touching
-
-        $('.tag').each(function (idx) {
-            do {
-                var container = $(this).parent(),
-                    diam = Math.round(Math.random() * 155 + 100),
-                    top = Math.round(Math.random() * (container.height() - diam)),
-                    left = Math.round(Math.random() * (container.width() - diam)),
-                    bg = '#' + (Math.random() * 128 + 32 << 0).toString(16) + (Math.random() * 128 + 32 << 0).toString(16) + (Math.random() * 128 + 32 << 0).toString(16);
-
-                $(this)
-                    .css({
-                        top: top,
-                        left: left,
-                        width: diam,
-                        font: diam / 5 + 'px verdana',
-                        lineHeight: diam + 'px'
-                    })
-                    .html('<a href="contact.html" class="wc-btn-primary btn-item btn-hover"><span></span> Join our <br>talented team<i class="fa-solid fa-arrow-right"></i></a>');
-            } while (touching(14));
-        });</script>
+        new Textify({
+            el: '.large-text',
+            observer: {
+                repeat: true
+            },
+            animation: {
+            stagger: 0.025,
+            duration: 1.5,
+            ease: 'expo.inOut',
+            animateProps: {"opacity":0,"scale":0.5}
+            }
+        },gsap)
+    </script>
     <script>
         $('.carosel').owlCarousel({
             loop: true,
