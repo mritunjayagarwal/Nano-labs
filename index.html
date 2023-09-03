@@ -20,16 +20,16 @@
 </head>
 
 <body>
-    <!-- <div class = "cursor1"></div>
-    <div class = "cursor2"></div> -->
     <main>
+        <div class="cursor1"></div>
+        <div class="cursor2"></div>
         <section id="hero"
             style="height: 100vh;background: url(./assets/img/hero-bg.png) no-repeat; background-size: cover; background-position: center;padding: 0">
             <div style="background: rgba(192, 192, 192, 0.37); height: 100%; padding: 50px 0 0 0">
                 <div class="container">
                     <div class="row mt-5 h-100">
                         <div class="col-lg-6 d-flex align-items-center h-100">
-                            <div class = "w-100">
+                            <div class="w-100">
                                 <div>
                                     <p style="margin-bottom: 0">This makes</p>
                                     <h1 class="large-text animation-0">marketing</h1>
@@ -41,13 +41,15 @@
                                         <h1 class="large-text">results</h1>
                                     </div>
                                 </div>
-                                <div class = "pt-5">
+                                <div class="pt-5">
                                     <p style="width: 40%">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
                                 </div>
                                 <div class="d-flex justify-content-between align-items-center pt-5">
-                                    <p style = "font-size: 22px; color: green;">&</p>
+                                    <p style="font-size: 22px; color: green;">&</p>
                                     <p>Lorem ipsum</p>
-                                    <button class="px-3 btn" style = "background: transparent;border-radius: 44px; border: 2px solid #858585">Lorem Ipsum dolor</button>
+                                    <button class="px-3 btn"
+                                        style="background: transparent;border-radius: 44px; border: 2px solid #858585">Lorem
+                                        Ipsum dolor</button>
                                 </div>
                             </div>
                         </div>
@@ -172,7 +174,7 @@
                 </div>
             </div>
         </section>
-        <section class = "carousel-section" style="background: rgba(36, 164, 90, 1);">
+        <section class="carousel-section" style="background: rgba(36, 164, 90, 1);">
             <div class="container text-white">
                 <h6 class="text-white">This makes</h6>
                 <div clas="d-flex justify-content-between">
@@ -183,23 +185,23 @@
                         <div class="item">
                             <div class="flip-card">
                                 <div class="flip-card-inner">
-                                  <div class="flip-card-front">
-                                    <img src="./assets/img/slider/1.jfif" class = "img-fluid w-100">
-                                  </div>
-                                  <div class="flip-card-back">
-                                    <div class="strategy-card">
-                                        <h1 class="strategy-head">Analyse & Strategy</h1>
-                                        <p class="strategy-para">Lorem ipsum, dolor sit amet consectetur
-                                            adipisicing
-                                            elit. Aliquam esse, neque quos nostrum, necessitatibus nisi expedita
-                                            ea
-                                            vitae id possimus molestias, aspernatur illo. Aliquam hic odio
-                                            assumenda
-                                            sint odit ipsum?</p>
+                                    <div class="flip-card-front">
+                                        <img src="./assets/img/slider/1.jfif" class="img-fluid w-100">
                                     </div>
-                                  </div>
+                                    <div class="flip-card-back">
+                                        <div class="strategy-card">
+                                            <h1 class="strategy-head">Analyse & Strategy</h1>
+                                            <p class="strategy-para">Lorem ipsum, dolor sit amet consectetur
+                                                adipisicing
+                                                elit. Aliquam esse, neque quos nostrum, necessitatibus nisi expedita
+                                                ea
+                                                vitae id possimus molestias, aspernatur illo. Aliquam hic odio
+                                                assumenda
+                                                sint odit ipsum?</p>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -336,7 +338,7 @@
     <script src="assets/js/vanilla-tilt.js"></script>
     <script src="assets/js/jquery.meanmenu.min.js"></script>
     <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
-    <script src = "https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/textify.js/dist/Textify.min.js"></script>
     <!-- <script src = " https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script> -->
     <script src="assets/js/main.js"></script>
     <script>
@@ -346,24 +348,24 @@
                 repeat: false
             },
             animation: {
-            stagger: 0.025,
-            duration: 1.5,
-            ease: 'expo.inOut',
-            animateProps: {"opacity":0,"scale":0.5}
+                stagger: 0.025,
+                duration: 1.5,
+                ease: 'expo.inOut',
+                animateProps: { "opacity": 0, "scale": 0.5 }
             }
-        },gsap);
+        }, gsap);
 
         new Textify({
             el: 'h6',
             splitType: 'lines',
             largeText: true,
             animation: {
-            by: 'lines',
-            stagger: 0.1,
-            duration: 0.7,
-            ease: 'expo.inOut',
-            transformOrigin: 'left top',
-            animateProps: {"y":"0","opacity":0}
+                by: 'lines',
+                stagger: 0.1,
+                duration: 0.7,
+                ease: 'expo.inOut',
+                transformOrigin: 'left top',
+                animateProps: { "y": "0", "opacity": 0 }
             }
         }, gsap)
 
@@ -372,12 +374,12 @@
             splitType: 'lines',
             largeText: true,
             animation: {
-            by: 'lines',
-            stagger: 0.1,
-            duration: 0.7,
-            ease: 'expo.inOut',
-            transformOrigin: 'left top',
-            animateProps: {"y":"0","opacity":0}
+                by: 'lines',
+                stagger: 0.1,
+                duration: 0.7,
+                ease: 'expo.inOut',
+                transformOrigin: 'left top',
+                animateProps: { "y": "0", "opacity": 0 }
             }
         }, gsap)
     </script>
