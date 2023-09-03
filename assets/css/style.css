@@ -8,11 +8,19 @@
     max-width: 90%;
     margin: 0 auto;
 }
+/* 
+main{
+    scroll-snap-type: y mandatory !important;
+    overflow-y: scroll !important;
+    height: 100vh !important;
+} */
 
 section {
     position: relative;
     padding: 100px 0;
     z-index: 0;
+    /* scroll-snap-align: end;
+    height: 100vh */
 }
 
 .hero-img {

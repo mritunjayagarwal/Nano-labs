@@ -27,11 +27,8 @@
             style="height: 100vh;background: url(./assets/img/hero-bg.png) no-repeat; background-size: cover; background-position: center;padding: 0">
             <div style="background: rgba(192, 192, 192, 0.37); height: 100%; padding: 50px 0 0 0">
                 <div class="container">
-                    <div>
-                        <img src="./assets/img/logo.png" style = "width: 80px;" alt="">
-                    </div>
                     <div class="row mt-5 h-100">
-                        <div class="col-lg-7 d-flex align-items-center h-100">
+                        <div class="col-lg-6 d-flex align-items-center h-100">
                             <div class = "w-100">
                                 <div>
                                     <p style="margin-bottom: 0">This makes</p>
@@ -55,8 +52,8 @@
                             </div>
                         </div>
                     </div>
-                    <img src="./assets/img/hero-man.png" class="img-fluid hero-img" alt="">
                 </div>
+                <img src="./assets/img/hero-man.png" class="img-fluid hero-img" alt="">
             </div>
         </section>
         <section>
@@ -346,7 +343,7 @@
         new Textify({
             el: '.large-text',
             observer: {
-                repeat: true
+                repeat: false
             },
             animation: {
             stagger: 0.025,
@@ -354,7 +351,35 @@
             ease: 'expo.inOut',
             animateProps: {"opacity":0,"scale":0.5}
             }
-        },gsap)
+        },gsap);
+
+        new Textify({
+            el: 'h6',
+            splitType: 'lines',
+            largeText: true,
+            animation: {
+            by: 'lines',
+            stagger: 0.1,
+            duration: 0.7,
+            ease: 'expo.inOut',
+            transformOrigin: 'left top',
+            animateProps: {"y":"0","opacity":0}
+            }
+        }, gsap)
+
+        new Textify({
+            el: 'p',
+            splitType: 'lines',
+            largeText: true,
+            animation: {
+            by: 'lines',
+            stagger: 0.1,
+            duration: 0.7,
+            ease: 'expo.inOut',
+            transformOrigin: 'left top',
+            animateProps: {"y":"0","opacity":0}
+            }
+        }, gsap)
     </script>
     <script>
         $('.carosel').owlCarousel({
